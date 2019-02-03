@@ -14,7 +14,7 @@ namespace NoSlang.Test
             var data = "ji394su3";
             var mustBe = "£¹£¬£¾£¯£¿£z£¸£¾";
 
-            var junkProcessor = new Junk();
+            var junkProcessor = new Bopomofo();
 
             var result = Parser.From(data, junkProcessor);
 
@@ -29,7 +29,7 @@ namespace NoSlang.Test
             var data = "ji3rm,62k71j4vu/6";
             var mustBe = "£¹£¬£¾£¡£º£®£½£x£­£»£t£¹£¿£££¸£¶£½";
 
-            var junkProcessor = new Junk();
+            var junkProcessor = new Bopomofo();
 
             var result = Parser.From(data, junkProcessor);
 

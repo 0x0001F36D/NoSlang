@@ -10,7 +10,7 @@ namespace NoSlang.CLI
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Parser.From("JI3U/6AJ4D9 5K7", new Junk()).Value);
+            Console.WriteLine(Parser.From("JI3U/6AJ4D9 5K7", new Bopomofo()).Value);
             //throw new NotImplementedException();
             Console.ReadKey();
         }

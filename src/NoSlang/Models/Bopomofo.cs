@@ -6,7 +6,7 @@ namespace NoSlang.Models
     using System.Text;
 
 
-    public class Junk : ProcessModel
+    public class Bopomofo : ProcessModel
     {
         private readonly Dictionary<string, string> _symbols = new Dictionary<string, string>
         {
