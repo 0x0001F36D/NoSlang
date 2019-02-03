@@ -1,14 +1,15 @@
-﻿
+﻿// Author: Viyrex(aka Yuyu)
+// Contact: mailto:viyrex.aka.yuyu@gmail.com
+// Github: https://github.com/0x0001F36D
+
 namespace NoSlang.Models
 {
-    using System;
     using System.Collections.Generic;
     using System.Text;
 
-
     public class Bopomofo : ProcessModel
     {
-        private readonly Dictionary<string, string> _symbols = new Dictionary<string, string>
+        protected readonly Dictionary<string, string> Symbols = new Dictionary<string, string>
         {
             ["1"] = "\u3105", //
             ["q"] = "\u3106",
@@ -49,7 +50,7 @@ namespace NoSlang.Models
             ["m"] = "\u3129",
         };
 
-        private readonly Dictionary<string,string> _tone = new Dictionary<string, string>
+        protected readonly Dictionary<string, string> Tones = new Dictionary<string, string>
         {
             ["3"] = "\u02c7",
             ["4"] = "\u02cb",
@@ -58,13 +59,13 @@ namespace NoSlang.Models
             [" "] = "\u02c9"
         };
 
-        internal protected override bool TryParse(string abracadabra, out string result)
+        protected internal override bool TryParse(string abracadabra, out string result)
         {
             var sb = new StringBuilder(abracadabra.Length);
             for (var i = 0; i < abracadabra.Length; i++)
             {
                 var c = abracadabra[i].ToString().ToLower();
-                if (this._symbols.TryGetValue(c, out var v) || this._tone.TryGetValue(c, out v))
+                if (this.Symbols.TryGetValue(c, out var v) || this.Tones.TryGetValue(c, out v))
                 {
                     sb.Append(v);
                 }
@@ -75,6 +76,5 @@ namespace NoSlang.Models
             result = sb.ToString();
             return true;
         }
-        
     }
 }

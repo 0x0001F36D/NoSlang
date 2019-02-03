@@ -1,7 +1,11 @@
+// Author: Viyrex(aka Yuyu)
+// Contact: mailto:viyrex.aka.yuyu@gmail.com
+// Github: https://github.com/0x0001F36D
 
 namespace NoSlang.Test
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+
     using NoSlang.Models;
 
     [TestClass]
@@ -19,7 +23,6 @@ namespace NoSlang.Test
             var result = Parser.From(data, junkProcessor);
 
             Assert.AreEqual(result.Value, mustBe);
-            
         }
 
         [TestMethod]
@@ -34,7 +37,6 @@ namespace NoSlang.Test
             var result = Parser.From(data, junkProcessor);
 
             Assert.AreEqual(result.Value, mustBe);
-
         }
     }
 }
